@@ -1,0 +1,26 @@
+FROM alpine:3.24.1 AS base
+LABEL AUTHOR="Frédéric Loulergue"
+
+ARG USERNAME
+ARG USERID
+
+RUN echo "==============================="
+RUN echo "$USERNAME ($USERID)"
+RUN echo "==============================="
+
+RUN apk add --no-cache \
+        python3=~3.14 sqlite=~3.53 \
+        py3-pip=~26.1 pipx=~1.14 \
+        bash shadow
+RUN echo "UID_MAX 9223372036854775807" > /etc/login.defs && \
+    /usr/sbin/useradd -m -d /home/user -s /bin/bash -u ${USERID} ${USERNAME}
+USER ${USERNAME}
+RUN python3 -m pipx install django==5.2.17 && \
+    python3 -m pipx ensurepath && \
+    python3 -m pipx inject django tzdata
+RUN echo 'export PS1="[ $(whoami) | \w ] "' >> /home/user/.bashrc && \
+    echo 'source ~/.local/share/pipx/venvs/django/bin/activate' \
+        >> /home/user/.bashrc && \
+    mkdir /home/user/workspace
+WORKDIR /home/user/workspace
+CMD  [ "/bin/bash" ]
