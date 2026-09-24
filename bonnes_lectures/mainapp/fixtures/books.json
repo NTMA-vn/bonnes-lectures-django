@@ -1,0 +1,28 @@
+[
+{
+  "model": "mainapp.book",
+  "pk": 1,
+  "fields": {
+    "author": "Frank Herbert",
+    "title": "Dune",
+    "publisher": "Chilton Books",
+    "year": 1965,
+    "isbn": "978-0441172719",
+    "backCover": "L'épopée de Paul Atréides sur la planète des sables Arrakis.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 2,
+  "fields": {
+    "author": "Isaac Asimov",
+    "title": "Fondation",
+    "publisher": "Gnome Press",
+    "year": 1951,
+    "isbn": "978-2070360536",
+    "backCover": "L'effondrement de l'Empire galactique et la psycho-histoire.",
+    "cover": false
+  }
+}
+]
