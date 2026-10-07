@@ -2,21 +2,20 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Liste des livres</title>
+  <title>{{ book.title }}</title>
 </head>
 <body>
-  <h1>Liste des livres</h1>
+  <h1>{{ book.title }}</h1>
 
-  <ul>
-    {% for book in books %}
-      <li>
-        <a href="{% url 'book' book.id %}">{{ book.title }}</a> - {{ book.author }}
-      </li>
-    {% empty %}
-      <li>Aucun livre pour le moment.</li>
-    {% endfor %}
-  </ul>
+  <p><strong>Auteur :</strong> {{ book.author }}</p>
+  <p><strong>Maison d'édition :</strong> {{ book.publisher }}</p>
+  <p><strong>Année :</strong> {{ book.year }}</p>
+  <p><strong>ISBN :</strong> {{ book.isbn }}</p>
 
-  <p><a href="{% url 'welcome' %}">Retour à l'accueil</a></p>
+  <h2>Présentation</h2>
+  <p>{{ book.backCover }}</p>
+
+  <p><a href="{% url 'edit_book' book.id %}">Modifier ce livre</a></p>
+  <p><a href="{% url 'book_list' %}">Retour à la liste des livres</a></p>
 </body>
-</html>     
+</html>
