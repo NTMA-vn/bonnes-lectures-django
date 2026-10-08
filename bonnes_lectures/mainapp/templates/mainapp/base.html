@@ -1,0 +1,30 @@
+{% load django_bootstrap5 %}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Bonnes lectures{% endblock %}</title>
+  {% bootstrap_css %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'welcome' %}">Bonnes lectures</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="{% url 'welcome' %}">Accueil</a>
+        <a class="nav-link" href="{% url 'book_list' %}">Livres</a>
+        <a class="nav-link" href="{% url 'new_book' %}">Nouveau livre</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    {% bootstrap_messages %}
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  {% bootstrap_javascript %}
+</body>
+</html>

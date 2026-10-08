@@ -1,17 +1,14 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Supprimer {{ book.title }}</title>
-</head>
-<body>
-  <h1>Voulez vous vraiment éffacer le livre « {{ book.title }} » ?</h1>
+{% extends 'mainapp/base.html' %}
+
+{% block title %}Supprimer {{ book.title }}{% endblock %}
+
+{% block content %}
+  <h1>Voulez-vous vraiment effacer le livre « {{ book.title }} » ?</h1>
 
   <form method="post">
     {% csrf_token %}
-    <button type="submit">Confirmer</button>
+    <button type="submit" class="btn btn-danger">Confirmer</button>
   </form>
 
   <p><a href="{% url 'book' book.id %}">Annuler</a></p>
-</body>
-</html>
+{% endblock %}

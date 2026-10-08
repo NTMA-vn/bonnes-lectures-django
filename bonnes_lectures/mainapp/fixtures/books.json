@@ -1,41 +1,54 @@
 [
-  {
-    "model": "mainapp.book",
-    "pk": 1,
-    "fields": {
-      "author": "Lionel Davoust",
-      "title": "La volontÃ© du dragon",
-      "publisher": "Critic",
-      "year": 2010,
-      "isbn": "978-2-9534998-1-0",
-      "backCover": "Une reine dont les yeux Ã©meraude lisent l'avenir... Un enfant-roi, passablement fou, gardien d'un savoir oubliÃ©... Du dÃ©roulement de leur partie d'Ã©checs pourrait bien se dÃ©cider l'issue de la guerre... Entre les derniers royaumes libres et les forces d'invasion de l'Empire d'Asreth se dresse l'imprenable Qhmarr, petit pays Ã  peine sorti de l'Ã¨re mÃ©diÃ©vale. GouvernÃ© par un roi trop jeune et un conseiller trop confiant, il ne devrait reprÃ©senter dans le plan de conquÃªte de l'Empire qu'une note de bas de page. Et alors que le gÃ©nÃ©ralissime D'eolus Vasteth s'emploie Ã  nÃ©gocier les modalitÃ©s d'une reddition diplomatique, dÃ©jÃ , aux portes de la capitale, se presse l'implacable armada... La conclusion du conflit ne fait aucun doute. D'une maniÃ¨re ou d'une autre, Qhmarr passera sous pavillon asrien. Pourtant, malgrÃ© la dÃ©faite annoncÃ©e, Vasteth dÃ©couvre des dirigeants qhmarri inflexibles, prÃªts Ã  confier le destin de leur nation Ã  d'absurdes croyances ancestrales. Ã€ travers le dÃ©fi lancÃ© par l'enfant-roi, ce sont toutes les certitudes du gÃ©nÃ©ralissime qui vont se voir Ã©branlÃ©es, tandis que, sur la mer, les soldats meurent, simples pions sur un Ã©chiquier qui les dÃ©passe... Lionel Davoust est l'auteur d'une dizaine de nouvelles dont Â« L'Ã®le close Â», laurÃ©ate du prix Imaginales 2009, qui a connu une traduction amÃ©ricaine. La VolontÃ© du Dragon dÃ©veloppe l'univers d'Ã‰vanÃ©gyre introduit dans la nouvelle Â« Bataille pour un Souvenir Â» (finaliste de la derniÃ¨re sÃ©lection des Utopiales). Avec ce court roman indÃ©pendant, il nous plonge dans l'affrontement inÃ©gal entre un puissant empire, fort d'avoir domptÃ© une magie par la technologie, et un petit pays au culte passÃ©iste ; l'occasion, pour lui, d'opposer deux faÃ§ons de penser le monde. Un conflit passionnant oÃ¹ l'on est bien en peine de deviner qui sera mis Â« Ã©chec et mat Â».",
-      "cover": false
-    }
-  },
-  {
-    "model": "mainapp.book",
-    "pk": 2,
-    "fields": {
-      "author": "George R. R. MARTIN & Lisa TUTTLE",
-      "title": "Elle qui chevauche les tempÃªtes",
-      "publisher": "DENOÃ‹L",
-      "year": 1999,
-      "isbn": "2-207-24875-5",
-      "backCover": "Roman de 444 pages, publiÃ© chez DENOÃ‹L en 1999. Genre indiquÃ© : Science-Fiction.",
-      "cover": false
-    }
-  },
-  {
-    "model": "mainapp.book",
-    "pk": 3,
-    "fields": {
-      "author": "Robert HOLDSTOCK",
-      "title": "Dans la vallÃ©e des statues et autres rÃ©cits",
-      "publisher": "DENOÃ‹L",
-      "year": 2004,
-      "isbn": "2-207-25487-9",
-      "backCover": "Recueil de nouvelles de 560 pages, publiÃ© chez DENOÃ‹L en 2004. Genre indiquÃ© : Science-Fiction.",
-      "cover": false
-    }
+{
+  "model": "mainapp.book",
+  "pk": 1,
+  "fields": {
+    "author": "Lionel Davoust",
+    "title": "la volonté du dragon",
+    "publisher": "Lionel Messi",
+    "year": 2067,
+    "isbn": "978-2-9534998-1-0",
+    "backCover": "Une reine dont les yeux émeraude lisent l'avenir... Un enfant-roi, passablement fou, gardien d'un savoir oublié... Du déroulement de leur partie d'échecs pourrait bien se décider l'issue de la guerre... Entre les derniers royaumes libres et les forces d'invasion de l'Empire d'Asreth se dresse l'imprenable Qhmarr, petit pays à peine sorti de l'ère médiévale. Gouverné par un roi trop jeune et un conseiller trop confiant, il ne devrait représenter dans le plan de conquête de l'Empire qu'une note de bas de page. Et alors que le généralissime D'eolus Vasteth s'emploie à négocier les modalités d'une reddition diplomatique, déjà, aux portes de la capitale, se presse l'implacable armada... La conclusion du conflit ne fait aucun doute. D'une manière ou d'une autre, Qhmarr passera sous pavillon asrien. Pourtant, malgré la défaite annoncée, Vasteth découvre des dirigeants qhmarri inflexibles, prêts à confier le destin de leur nation à d'absurdes croyances ancestrales. À travers le défi lancé par l'enfant-roi, ce sont toutes les certitudes du généralissime qui vont se voir ébranlées, tandis que, sur la mer, les soldats meurent, simples pions sur un échiquier qui les dépasse... Lionel Davoust est l'auteur d'une dizaine de nouvelles dont « L'île close », lauréate du prix Imaginales 2009, qui a connu une traduction américaine. La Volonté du Dragon développe l'univers d'Évanégyre introduit dans la nouvelle « Bataille pour un Souvenir » (finaliste de la dernière sélection des Utopiales). Avec ce court roman indépendant, il nous plonge dans l'affrontement inégal entre un puissant empire, fort d'avoir dompté une magie par la technologie, et un petit pays au culte passéiste ; l'occasion, pour lui, d'opposer deux façons de penser le monde. Un conflit passionnant où l'on est bien en peine de deviner qui sera mis « échec et mat ».",
+    "cover": false
   }
+},
+{
+  "model": "mainapp.book",
+  "pk": 2,
+  "fields": {
+    "author": "George R. R. MARTIN & Lisa TUTTLE",
+    "title": "Elle qui chevauche les tempêtes",
+    "publisher": "DENOËL",
+    "year": 1999,
+    "isbn": "2-207-24875-5",
+    "backCover": "Roman de 444 pages, publié chez DENOËL en 1999. Genre indiqué : Science-Fiction.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 3,
+  "fields": {
+    "author": "Robert HOLDSTOCK",
+    "title": "Dans la vallée des statues et autres récits",
+    "publisher": "DENOËL",
+    "year": 2004,
+    "isbn": "2-207-25487-9",
+    "backCover": "Recueil de nouvelles de 560 pages, publié chez DENOËL en 2004. Genre indiqué : Science-Fiction.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 4,
+  "fields": {
+    "author": "Sy Hung TRAN",
+    "title": "Hung et ses amis",
+    "publisher": "TRAN Frères",
+    "year": 2025,
+    "isbn": "676767676767",
+    "backCover": "Le goat Sy Hung",
+    "cover": false
+  }
+}
 ]
