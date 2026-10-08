@@ -1,0 +1,24 @@
+{% extends 'mainapp/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}
+  {% if book %}Modifier {{ book.title }}{% else %}Nouveau livre{% endif %}
+{% endblock %}
+
+{% block content %}
+  <h1>{% if book %}Modifier le livre{% else %}Nouveau livre{% endif %}</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Enregistrer" %}
+  </form>
+
+  <p>
+    {% if book %}
+      <a href="{% url 'book' book.id %}">Annuler</a>
+    {% else %}
+      <a href="{% url 'book_list' %}">Annuler</a>
+    {% endif %}
+  </p>
+{% endblock %}

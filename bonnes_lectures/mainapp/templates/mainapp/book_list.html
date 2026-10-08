@@ -1,16 +1,14 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Liste des livres</title>
-</head>
-<body>
+{% extends 'mainapp/base.html' %}
+
+{% block title %}Liste des livres{% endblock %}
+
+{% block content %}
   <h1>Liste des livres</h1>
 
   <ul>
     {% for book in books %}
       <li>
-        <a href="{% url 'book' book.id %}">{{ book.title }}</a> - {{ book.author }}
+        <a href="{% url 'book' book.id %}">{{ book.title }}</a> — {{ book.author }}
         (<a href="{% url 'edit_book' book.id %}">modifier</a>,
          <a href="{% url 'delete_book' book.id %}">supprimer</a>)
       </li>
@@ -18,7 +16,6 @@
       <li>Aucun livre pour le moment.</li>
     {% endfor %}
   </ul>
-  <p><a href="{% url 'new_book' %}">Nouveau livre</a></p>
-  <p><a href="{% url 'welcome' %}">Retour à l'accueil</a></p>
-</body>
-</html>
+
+  <p><a href="{% url 'new_book' %}" class="btn btn-primary">Nouveau livre</a></p>
+{% endblock %}

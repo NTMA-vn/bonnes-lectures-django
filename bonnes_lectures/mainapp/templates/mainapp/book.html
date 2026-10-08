@@ -1,10 +1,8 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>{{ book.title }}</title>
-</head>
-<body>
+{% extends 'mainapp/base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
   <h1>{{ book.title }}</h1>
 
   <p><strong>Auteur :</strong> {{ book.author }}</p>
@@ -16,9 +14,8 @@
   <p>{{ book.backCover }}</p>
 
   <p>
-    <a href="{% url 'edit_book' book.id %}">Modifier ce livre</a>
-    <a href="{% url 'delete_book' book.id %}">Supprimer ce livre</a>
+    <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">Modifier</a>
+    <a href="{% url 'delete_book' book.id %}">Supprimer</a>
   </p>
-  <p> <a href="{% url 'book_list' %}">Retour à la liste des livres</a></p>
-</body>
-</html>
+  <p><a href="{% url 'book_list' %}">Retour à la liste des livres</a></p>
+{% endblock %}
