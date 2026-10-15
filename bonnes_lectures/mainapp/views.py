@@ -19,7 +19,6 @@ def book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     reviews = book.reviews.all()
     return render(request, 'mainapp/book.html', {'book': book, 'reviews': reviews})
-   
 
 def new_book(request):
     if request.method == "POST":
@@ -49,24 +48,13 @@ def delete_book(request, book_id):
         return redirect('book_list')
     return render(request, 'mainapp/book_confirm_delete.html', {'book': book})
 
-def edit_book(request, book_id):
-    book = get_object_or_404(Book, pk=book_id)
-    if request.method == "POST":
-        form = BookForm(request.POST, instance=book)
-        if form.is_valid():
-            form.save()
-            return redirect('book', book_id=book.id)
-    else:
-        form = BookForm(instance=book)
-    return render(request, 'mainapp/book_form.html', {'form': form, 'book': book})
-
 def new_review(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.book = book  # Associe le livre choisi par l'URL
+            review.book = book
             review.save()
             return redirect('book', book_id=book.id)
     else:
