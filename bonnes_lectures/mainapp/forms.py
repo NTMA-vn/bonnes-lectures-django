@@ -1,5 +1,5 @@
 from django import forms
-from .models import Book
+from .models import Book, Review
 
 class BookForm(forms.ModelForm):
     class Meta:
@@ -13,4 +13,13 @@ class BookForm(forms.ModelForm):
             "isbn": "ISBN",
             "backCover": "Présentation",
             "cover": "Couverture disponible",
+        }
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ["body", "rating"]
+        labels = {
+            "body": "Avis",
+            "rating": "Note (sur 5)",
         }

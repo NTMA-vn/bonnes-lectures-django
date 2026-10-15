@@ -13,9 +13,38 @@
   <h2>Présentation</h2>
   <p>{{ book.backCover }}</p>
 
+  <h2>Avis sur ce livre</h2>
+
+  <ul>
+    {% for review in reviews %}
+      <li>
+        <strong>Note :</strong> {{ review.rating }}/5<br>
+        {{ review.body }}<br>
+        <small>Posté le {{ review.publication_date }}</small>
+        <br>
+        <a href="{% url 'edit_review' review.id %}">Modifier</a>
+        |
+        <a href="{% url 'delete_review' review.id %}">Supprimer</a>
+      </li>
+    {% empty %}
+      <li>Aucun avis pour le moment.</li>
+    {% endfor %}
+  </ul>
   <p>
-    <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">Modifier</a>
-    <a href="{% url 'delete_book' book.id %}">Supprimer</a>
+    <a href="{% url 'new_review' book.id %}">Ajouter un avis</a>
   </p>
-  <p><a href="{% url 'book_list' %}">Retour à la liste des livres</a></p>
+
+  <p>
+    <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">
+      Modifier livre
+    </a>
+
+    <a href="{% url 'delete_book' book.id %}">
+      Supprimer livre
+    </a>
+  </p>
+
+  <p>
+    <a href="{% url 'book_list' %}">Retour à la liste des livres</a>
+  </p>
 {% endblock %}
