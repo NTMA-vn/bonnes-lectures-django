@@ -12,7 +12,11 @@ class Author(models.Model):
         return self.last_name
 
 class Book(models.Model):
-    author = models.CharField(max_length=200)
+    author = models.ForeignKey(
+        Author,
+        on_delete=models.PROTECT,
+        related_name="books",
+    )
     title = models.CharField(max_length=300)
     publisher = models.CharField(max_length=200)
     year = models.IntegerField()
