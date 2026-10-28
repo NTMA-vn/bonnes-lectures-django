@@ -1,8 +1,56 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
-from .forms import BookForm, ReviewForm
-from .models import Book, Review
+from django.db.models import ProtectedError
+from .forms import BookForm, ReviewForm, AuthorForm
+from .models import Book, Review, Author
+def author_list(request):
+    authors = Author.objects.order_by('last_name', 'first_name')
+    return render(request, 'mainapp/author_list.html', {'authors': authors})
 
+def author_detail(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    books = author.books.all()
+    return render(request, 'mainapp/author_detail.html', {'author': author, 'books': books})
+
+def new_author(request):
+    if request.method == "POST":
+        form = AuthorForm(request.POST)
+        if form.is_valid():
+            author = form.save()
+            return redirect('author_detail', author_id=author.id)
+    else:
+        form = AuthorForm()
+    return render(request, 'mainapp/author_form.html', {'form': form})
+
+def edit_author(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    if request.method == "POST":
+        form = AuthorForm(request.POST, instance=author)
+        if form.is_valid():
+            form.save()
+            return redirect('author_detail', author_id=author.id)
+    else:
+        form = AuthorForm(instance=author)
+    return render(request, 'mainapp/author_form.html', {'form': form, 'author': author})
+
+def delete_author(request, author_id):
+    author = get_object_or_404(Author, pk=author_id)
+    error_message = None
+
+    if request.method == "POST":
+        try:
+            author.delete()
+            return redirect('author_list')
+        except ProtectedError:
+            error_message = (
+                f"Impossible de supprimer cet auteur : {author.books.count()} livre(s) "
+                f"lui sont encore associé(s). Supprimez d'abord ses livres !"
+            )
+
+    return render(request, 'mainapp/author_confirm_delete.html', {
+        'author': author,
+        'error_message': error_message,
+    })
 def about(request):
     return HttpResponse(
         "Application Bonnes Lectures, développée en TP de Framework Web, Université d’Orléans, 2026."

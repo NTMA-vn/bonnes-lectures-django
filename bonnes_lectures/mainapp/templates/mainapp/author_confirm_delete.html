@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %}Supprimer {{ author }}{% endblock %}
+
+{% block content %}
+  <h1>Supprimer l'auteur</h1>
+
+  {% if error_message %}
+    <div class="alert alert-danger" role="alert">
+      <strong>Attention :</strong> {{ error_message }}
+    </div>
+    <p>
+      <a href="{% url 'author_detail' author.id %}" class="btn btn-secondary">Retour à la fiche</a>
+      <a href="{% url 'author_list' %}" class="btn btn-outline-secondary">Retour à la liste</a>
+    </p>
+  {% else %}
+    <p>Êtes-vous certain de vouloir supprimer l'auteur <strong>{{ author }}</strong> ?</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+      <a href="{% url 'author_detail' author.id %}" class="btn btn-secondary">Annuler</a>
+    </form>
+  {% endif %}
+{% endblock %}
