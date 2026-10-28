@@ -1,7 +1,11 @@
 from django import forms
-from .models import Book, Review
+from .models import Book, Review, Author
 
 class BookForm(forms.ModelForm):
+    author = forms.ModelChoiceField(
+        queryset=Author.objects.order_by('last_name', 'first_name'),
+        label="Auteur",
+        empty_label=" Choisissez un auteur",)
     class Meta:
         model = Book
         fields = ["author","title","publisher","year","isbn","backCover","cover",]
@@ -14,7 +18,7 @@ class BookForm(forms.ModelForm):
             "backCover": "Présentation",
             "cover": "Couverture disponible",
         }
-
+        help_texts = {"author": "Sélectionnez l'auteur de l'ouvrage dans la liste.",}
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
