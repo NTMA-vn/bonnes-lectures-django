@@ -18,8 +18,10 @@
           <span class="badge bg-secondary ms-2">{{ author.books.count }} livre(s)</span>
         </div>
         <div>
+          {% if user.is_authenticated and user == author.user or user.is_superuser %}
           <a href="{% url 'edit_author' author.id %}" class="btn btn-outline-secondary btn-sm">Modifier</a>
           <a href="{% url 'delete_author' author.id %}" class="btn btn-outline-danger btn-sm">Supprimer</a>
+          {% endif %}
         </div>
       </li>
     {% empty %}

@@ -6,8 +6,10 @@
   <h1>{{ author }}</h1>
 
   <div class="my-3">
+    {% if user.is_authenticated and user == author.user or user.is_superuser %}
     <a href="{% url 'edit_author' author.id %}" class="btn btn-outline-primary btn-sm">Modifier cet auteur</a>
     <a href="{% url 'delete_author' author.id %}" class="btn btn-outline-danger btn-sm">Supprimer cet auteur</a>
+    {% endif %}
     <a href="{% url 'author_list' %}" class="btn btn-outline-secondary btn-sm">Retour à la liste des auteurs</a>
   </div>
 

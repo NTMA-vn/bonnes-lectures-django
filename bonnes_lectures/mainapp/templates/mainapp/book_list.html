@@ -9,8 +9,10 @@
     {% for book in books %}
       <li>
         <a href="{% url 'book' book.id %}">{{ book.title }}</a> — {{ book.author }}
+        {% if user.is_authenticated and user == book.user or user.is_superuser %}
         (<a href="{% url 'edit_book' book.id %}">modifier</a>,
          <a href="{% url 'delete_book' book.id %}">supprimer</a>)
+        {% endif %}
       </li>
     {% empty %}
       <li>Aucun livre pour le moment.</li>

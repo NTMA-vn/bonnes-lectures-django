@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.core.exceptions import PermissionDenied
 from django.db.models import ProtectedError
 from .forms import BookForm, ReviewForm, AuthorForm
 from .models import Book, Review, Author
@@ -13,10 +14,14 @@ def author_detail(request, author_id):
     return render(request, 'mainapp/author_detail.html', {'author': author, 'books': books})
 
 def new_author(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     if request.method == "POST":
         form = AuthorForm(request.POST)
         if form.is_valid():
-            author = form.save()
+            author = form.save(commit=False)
+            author.user = request.user
+            author.save()
             return redirect('author_detail', author_id=author.id)
     else:
         form = AuthorForm()
@@ -24,6 +29,8 @@ def new_author(request):
 
 def edit_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
+    if not request.user.is_authenticated or (author.user != request.user and not request.user.is_superuser):
+        raise PermissionDenied
     if request.method == "POST":
         form = AuthorForm(request.POST, instance=author)
         if form.is_valid():
@@ -35,6 +42,8 @@ def edit_author(request, author_id):
 
 def delete_author(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
+    if not request.user.is_authenticated or (author.user != request.user and not request.user.is_superuser):
+        raise PermissionDenied
     error_message = None
 
     if request.method == "POST":
@@ -69,10 +78,14 @@ def book(request, book_id):
     return render(request, 'mainapp/book.html', {'book': book, 'reviews': reviews})
 
 def new_book(request):
+    if not request.user.is_authenticated:
+            return redirect('login')
     if request.method == "POST":
         form = BookForm(request.POST)
         if form.is_valid():
-            book = form.save()
+            book = form.save(commit=False)
+            book.user = request.user
+            book.save()
             return redirect('book', book_id=book.id)
     else:
         form = BookForm()
@@ -80,6 +93,8 @@ def new_book(request):
 
 def edit_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
+    if not request.user.is_authenticated or (book.user != request.user and not request.user.is_superuser):
+        raise PermissionDenied
     if request.method == "POST":
         form = BookForm(request.POST, instance=book)
         if form.is_valid():
@@ -91,18 +106,23 @@ def edit_book(request, book_id):
 
 def delete_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
+    if not request.user.is_authenticated or (book.user != request.user and not request.user.is_superuser):
+        raise PermissionDenied
     if request.method == "POST":
         book.delete()
         return redirect('book_list')
     return render(request, 'mainapp/book_confirm_delete.html', {'book': book})
 
 def new_review(request, book_id):
+    if not request.user.is_authenticated:
+            return redirect('login')
     book = get_object_or_404(Book, pk=book_id)
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.book = book
+            review.user = request.user
             review.save()
             return redirect('book', book_id=book.id)
     else:
@@ -111,6 +131,8 @@ def new_review(request, book_id):
 
 def edit_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
+    if not request.user.is_authenticated or (review.user != request.user and not request.user.is_superuser):
+        raise PermissionDenied
     book = review.book
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
@@ -123,6 +145,8 @@ def edit_review(request, review_id):
 
 def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
+    if not request.user.is_authenticated or (review.user != request.user and not request.user.is_superuser):
+        raise PermissionDenied
     book = review.book
     if request.method == "POST":
         review.delete()

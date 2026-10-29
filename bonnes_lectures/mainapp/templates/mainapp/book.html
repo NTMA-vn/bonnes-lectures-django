@@ -22,27 +22,29 @@
         {{ review.body }}<br>
         <small>Posté le {{ review.publication_date }}</small>
         <br>
-        <a href="{% url 'edit_review' review.id %}">Modifier</a>
-        |
-        <a href="{% url 'delete_review' review.id %}">Supprimer</a>
+        {% if user.is_authenticated and user == review.user or user.is_superuser %}
+          <a href="{% url 'edit_review' review.id %}">Modifier</a>
+          |
+          <a href="{% url 'delete_review' review.id %}">Supprimer</a>
+        {% endif %}
       </li>
     {% empty %}
       <li>Aucun avis pour le moment.</li>
     {% endfor %}
   </ul>
-  <p>
-    <a href="{% url 'new_review' book.id %}">Ajouter un avis</a>
-  </p>
 
-  <p>
-    <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">
-      Modifier livre
-    </a>
+  {% if user.is_authenticated %}
+    <p>
+      <a href="{% url 'new_review' book.id %}" class="btn btn-sm btn-outline-success">Ajouter un avis</a>
+    </p>
+  {% endif %}
 
-    <a href="{% url 'delete_book' book.id %}">
-      Supprimer livre
-    </a>
-  </p>
+  {% if user.is_authenticated and user == book.user or user.is_superuser %}
+    <p>
+      <a href="{% url 'edit_book' book.id %}" class="btn btn-primary">Modifier livre</a>
+      <a href="{% url 'delete_book' book.id %}" class="btn btn-danger">Supprimer livre</a>
+    </p>
+  {% endif %}
 
   <p>
     <a href="{% url 'book_list' %}">Retour à la liste des livres</a>

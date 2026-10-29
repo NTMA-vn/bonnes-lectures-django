@@ -1,10 +1,12 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100, blank=True)
     last_name = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         if self.first_name:
@@ -12,6 +14,7 @@ class Author(models.Model):
         return self.last_name
 
 class Book(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     author = models.ForeignKey(
         Author,
         on_delete=models.PROTECT,
@@ -34,6 +37,7 @@ class Review(models.Model):
     rating = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)]
     )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return f"Avis sur {self.book.title} ({self.rating}/5)"  
