@@ -19,6 +19,7 @@
       </div>
       <div class="navbar-nav">
         {% if user.is_authenticated %}
+          <a class="nav-link text-light me-2" href="{% url 'my_reviews' %}">Mes avis</a>
           <span class="navbar-text text-light me-3">👤 {{ user.username }}</span>
           <form method="post" action="{% url 'logout' %}" class="d-inline">
             {% csrf_token %}

@@ -1,14 +1,42 @@
 [
 {
+  "model": "mainapp.author",
+  "pk": 1,
+  "fields": {
+    "first_name": "tchetchene",
+    "last_name": "SAYBULATOV",
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.author",
+  "pk": 2,
+  "fields": {
+    "first_name": "okokok",
+    "last_name": "kokoko",
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.author",
+  "pk": 3,
+  "fields": {
+    "first_name": "",
+    "last_name": "Auteur Test",
+    "user": 1
+  }
+},
+{
   "model": "mainapp.book",
   "pk": 1,
   "fields": {
-    "author": "Lionel Davoust",
-    "title": "la volont� du dragon",
-    "publisher": "Lionel Messi",
-    "year": 2067,
-    "isbn": "978-2-9534998-1-0",
-    "backCover": "Une reine dont les yeux �meraude lisent l'avenir... Un enfant-roi, passablement fou, gardien d'un savoir oubli�... Du d�roulement de leur partie d'�checs pourrait bien se d�cider l'issue de la guerre... Entre les derniers royaumes libres et les forces d'invasion de l'Empire d'Asreth se dresse l'imprenable Qhmarr, petit pays � peine sorti de l'�re m�di�vale. Gouvern� par un roi trop jeune et un conseiller trop confiant, il ne devrait repr�senter dans le plan de conqu�te de l'Empire qu'une note de bas de page. Et alors que le g�n�ralissime D'eolus Vasteth s'emploie � n�gocier les modalit�s d'une reddition diplomatique, d�j�, aux portes de la capitale, se presse l'implacable armada... La conclusion du conflit ne fait aucun doute. D'une mani�re ou d'une autre, Qhmarr passera sous pavillon asrien. Pourtant, malgr� la d�faite annonc�e, Vasteth d�couvre des dirigeants qhmarri inflexibles, pr�ts � confier le destin de leur nation � d'absurdes croyances ancestrales. � travers le d�fi lanc� par l'enfant-roi, ce sont toutes les certitudes du g�n�ralissime qui vont se voir �branl�es, tandis que, sur la mer, les soldats meurent, simples pions sur un �chiquier qui les d�passe... Lionel Davoust est l'auteur d'une dizaine de nouvelles dont � L'�le close �, laur�ate du prix Imaginales 2009, qui a connu une traduction am�ricaine. La Volont� du Dragon d�veloppe l'univers d'�van�gyre introduit dans la nouvelle � Bataille pour un Souvenir � (finaliste de la derni�re s�lection des Utopiales). Avec ce court roman ind�pendant, il nous plonge dans l'affrontement in�gal entre un puissant empire, fort d'avoir dompt� une magie par la technologie, et un petit pays au culte pass�iste ; l'occasion, pour lui, d'opposer deux fa�ons de penser le monde. Un conflit passionnant o� l'on est bien en peine de deviner qui sera mis � �chec et mat �.",
+    "user": 1,
+    "author": 1,
+    "title": "bbbb",
+    "publisher": "pppp",
+    "year": 2005,
+    "isbn": "98",
+    "backCover": ";",
     "cover": false
   }
 },
@@ -16,12 +44,13 @@
   "model": "mainapp.book",
   "pk": 2,
   "fields": {
-    "author": "George R. R. MARTIN & Lisa TUTTLE",
-    "title": "Elle qui chevauche les temp�tes",
-    "publisher": "DENO�L",
-    "year": 1999,
-    "isbn": "2-207-24875-5",
-    "backCover": "Roman de 444 pages, publi� chez DENO�L en 1999. Genre indiqu� : Science-Fiction.",
+    "user": 1,
+    "author": 2,
+    "title": "How to say ok ?",
+    "publisher": "Kylian Mbappé (celui qui n'a pas ballon d'or)",
+    "year": 2026,
+    "isbn": "2026",
+    "backCover": ".",
     "cover": false
   }
 },
@@ -29,12 +58,13 @@
   "model": "mainapp.book",
   "pk": 3,
   "fields": {
-    "author": "Robert HOLDSTOCK",
-    "title": "Dans la vall�e des statues et autres r�cits",
-    "publisher": "DENO�L",
-    "year": 2004,
-    "isbn": "2-207-25487-9",
-    "backCover": "Recueil de nouvelles de 560 pages, publi� chez DENO�L en 2004. Genre indiqu� : Science-Fiction.",
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 1",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "6767-00001",
+    "backCover": "Résumé du livre test numéro 1.",
     "cover": false
   }
 },
@@ -42,13 +72,1720 @@
   "model": "mainapp.book",
   "pk": 4,
   "fields": {
-    "author": "Sy Hung TRAN",
-    "title": "Hung et ses amis",
-    "publisher": "TRAN Fr�res",
-    "year": 2025,
-    "isbn": "676767676767",
-    "backCover": "Le goat Sy Hung",
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 2",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "6767-00002",
+    "backCover": "Résumé du livre test numéro 2.",
     "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 3",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "6767-00003",
+    "backCover": "Résumé du livre test numéro 3.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 4",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "6767-00004",
+    "backCover": "Résumé du livre test numéro 4.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 5",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "6767-00005",
+    "backCover": "Résumé du livre test numéro 5.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 6",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "6767-00006",
+    "backCover": "Résumé du livre test numéro 6.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 7",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "6767-00007",
+    "backCover": "Résumé du livre test numéro 7.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 8",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "6767-00008",
+    "backCover": "Résumé du livre test numéro 8.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 11,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 9",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "6767-00009",
+    "backCover": "Résumé du livre test numéro 9.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 12,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 10",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "6767-00010",
+    "backCover": "Résumé du livre test numéro 10.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 13,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 11",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "6767-00011",
+    "backCover": "Résumé du livre test numéro 11.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 14,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 12",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "6767-00012",
+    "backCover": "Résumé du livre test numéro 12.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 15,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 13",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "6767-00013",
+    "backCover": "Résumé du livre test numéro 13.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 16,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 14",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "6767-00014",
+    "backCover": "Résumé du livre test numéro 14.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 15",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "6767-00015",
+    "backCover": "Résumé du livre test numéro 15.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 18,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 16",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "6767-00016",
+    "backCover": "Résumé du livre test numéro 16.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 19,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 17",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "6767-00017",
+    "backCover": "Résumé du livre test numéro 17.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 20,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 18",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "6767-00018",
+    "backCover": "Résumé du livre test numéro 18.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 21,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 19",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "6767-00019",
+    "backCover": "Résumé du livre test numéro 19.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 22,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 20",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "6767-00020",
+    "backCover": "Résumé du livre test numéro 20.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 23,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 21",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "6767-00021",
+    "backCover": "Résumé du livre test numéro 21.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 24,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 22",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "6767-00022",
+    "backCover": "Résumé du livre test numéro 22.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 25,
+  "fields": {
+    "user": 1,
+    "author": 3,
+    "title": "Livre Test 23",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "6767-00023",
+    "backCover": "Résumé du livre test numéro 23.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 26,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 24",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "978-0000000024",
+    "backCover": "Résumé du livre test numéro 24.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 27,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 25",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "978-0000000025",
+    "backCover": "Résumé du livre test numéro 25.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 28,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 26",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "978-0000000026",
+    "backCover": "Résumé du livre test numéro 26.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 29,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 27",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "978-0000000027",
+    "backCover": "Résumé du livre test numéro 27.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 30,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 28",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "978-0000000028",
+    "backCover": "Résumé du livre test numéro 28.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 31,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 29",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "978-0000000029",
+    "backCover": "Résumé du livre test numéro 29.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 32,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 30",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "978-0000000030",
+    "backCover": "Résumé du livre test numéro 30.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 33,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 31",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "978-0000000031",
+    "backCover": "Résumé du livre test numéro 31.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 34,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 32",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "978-0000000032",
+    "backCover": "Résumé du livre test numéro 32.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 35,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 33",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "978-0000000033",
+    "backCover": "Résumé du livre test numéro 33.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 36,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 34",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "978-0000000034",
+    "backCover": "Résumé du livre test numéro 34.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 37,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 35",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "978-0000000035",
+    "backCover": "Résumé du livre test numéro 35.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 38,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 36",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "978-0000000036",
+    "backCover": "Résumé du livre test numéro 36.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 39,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 37",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "978-0000000037",
+    "backCover": "Résumé du livre test numéro 37.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 40,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 38",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "978-0000000038",
+    "backCover": "Résumé du livre test numéro 38.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 41,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 39",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "978-0000000039",
+    "backCover": "Résumé du livre test numéro 39.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 42,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 40",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "978-0000000040",
+    "backCover": "Résumé du livre test numéro 40.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 43,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 41",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "978-0000000041",
+    "backCover": "Résumé du livre test numéro 41.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 44,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 42",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "978-0000000042",
+    "backCover": "Résumé du livre test numéro 42.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 45,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 43",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "978-0000000043",
+    "backCover": "Résumé du livre test numéro 43.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 46,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 44",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "978-0000000044",
+    "backCover": "Résumé du livre test numéro 44.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 47,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 45",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "978-0000000045",
+    "backCover": "Résumé du livre test numéro 45.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 48,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 46",
+    "publisher": "Édition Test",
+    "year": 2021,
+    "isbn": "978-0000000046",
+    "backCover": "Résumé du livre test numéro 46.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 49,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 47",
+    "publisher": "Édition Test",
+    "year": 2022,
+    "isbn": "978-0000000047",
+    "backCover": "Résumé du livre test numéro 47.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 50,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 48",
+    "publisher": "Édition Test",
+    "year": 2023,
+    "isbn": "978-0000000048",
+    "backCover": "Résumé du livre test numéro 48.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 52,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 50",
+    "publisher": "Édition Test",
+    "year": 2020,
+    "isbn": "978-0000000050",
+    "backCover": "Résumé du livre test numéro 50.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.book",
+  "pk": 53,
+  "fields": {
+    "user": 3,
+    "author": 3,
+    "title": "Livre Test 49",
+    "publisher": "Édition Test",
+    "year": 2024,
+    "isbn": "978-0000000049",
+    "backCover": "Résumé du livre test numéro 49.",
+    "cover": false
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 1,
+  "fields": {
+    "book": 1,
+    "publication_date": "2026-10-29T10:07:43.980Z",
+    "body": "good book",
+    "rating": 1,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 2,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:18.726Z",
+    "body": "Avis 1 sur le livre 1",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 3,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:18.926Z",
+    "body": "Avis 2 sur le livre 1",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 4,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:19.127Z",
+    "body": "Avis 3 sur le livre 1",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 5,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:19.362Z",
+    "body": "Avis 4 sur le livre 1",
+    "rating": 5,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 6,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:19.585Z",
+    "body": "Avis 5 sur le livre 1",
+    "rating": 1,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 7,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:19.796Z",
+    "body": "Avis 6 sur le livre 1",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 8,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:20.029Z",
+    "body": "Avis 7 sur le livre 1",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 9,
+  "fields": {
+    "book": 3,
+    "publication_date": "2026-10-29T11:29:20.241Z",
+    "body": "Avis 8 sur le livre 1",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 10,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:20.586Z",
+    "body": "Avis 1 sur le livre 2",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 11,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:20.742Z",
+    "body": "Avis 2 sur le livre 2",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 12,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:20.898Z",
+    "body": "Avis 3 sur le livre 2",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 13,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:21.064Z",
+    "body": "Avis 4 sur le livre 2",
+    "rating": 5,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 14,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:21.242Z",
+    "body": "Avis 5 sur le livre 2",
+    "rating": 1,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 15,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:21.432Z",
+    "body": "Avis 6 sur le livre 2",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 16,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:21.621Z",
+    "body": "Avis 7 sur le livre 2",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 17,
+  "fields": {
+    "book": 4,
+    "publication_date": "2026-10-29T11:29:21.810Z",
+    "body": "Avis 8 sur le livre 2",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 18,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:22.266Z",
+    "body": "Avis 1 sur le livre 3",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 19,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:22.444Z",
+    "body": "Avis 2 sur le livre 3",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 20,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:22.633Z",
+    "body": "Avis 3 sur le livre 3",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 21,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:22.811Z",
+    "body": "Avis 4 sur le livre 3",
+    "rating": 5,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 22,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:22.989Z",
+    "body": "Avis 5 sur le livre 3",
+    "rating": 1,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 23,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:23.180Z",
+    "body": "Avis 6 sur le livre 3",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 24,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:23.380Z",
+    "body": "Avis 7 sur le livre 3",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 25,
+  "fields": {
+    "book": 5,
+    "publication_date": "2026-10-29T11:29:23.569Z",
+    "body": "Avis 8 sur le livre 3",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 26,
+  "fields": {
+    "book": 7,
+    "publication_date": "2026-10-29T11:29:24.147Z",
+    "body": "Avis 1 sur le livre 5",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 27,
+  "fields": {
+    "book": 8,
+    "publication_date": "2026-10-29T11:29:24.504Z",
+    "body": "Avis 1 sur le livre 6",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 28,
+  "fields": {
+    "book": 8,
+    "publication_date": "2026-10-29T11:29:24.682Z",
+    "body": "Avis 2 sur le livre 6",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 29,
+  "fields": {
+    "book": 9,
+    "publication_date": "2026-10-29T11:29:25.049Z",
+    "body": "Avis 1 sur le livre 7",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 30,
+  "fields": {
+    "book": 9,
+    "publication_date": "2026-10-29T11:29:25.238Z",
+    "body": "Avis 2 sur le livre 7",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 31,
+  "fields": {
+    "book": 9,
+    "publication_date": "2026-10-29T11:29:25.438Z",
+    "body": "Avis 3 sur le livre 7",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 32,
+  "fields": {
+    "book": 11,
+    "publication_date": "2026-10-29T11:29:25.995Z",
+    "body": "Avis 1 sur le livre 9",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 33,
+  "fields": {
+    "book": 12,
+    "publication_date": "2026-10-29T11:29:26.373Z",
+    "body": "Avis 1 sur le livre 10",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 34,
+  "fields": {
+    "book": 12,
+    "publication_date": "2026-10-29T11:29:26.573Z",
+    "body": "Avis 2 sur le livre 10",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 35,
+  "fields": {
+    "book": 13,
+    "publication_date": "2026-10-29T11:29:26.976Z",
+    "body": "Avis 1 sur le livre 11",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 36,
+  "fields": {
+    "book": 13,
+    "publication_date": "2026-10-29T11:29:27.254Z",
+    "body": "Avis 2 sur le livre 11",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 37,
+  "fields": {
+    "book": 13,
+    "publication_date": "2026-10-29T11:29:27.454Z",
+    "body": "Avis 3 sur le livre 11",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 38,
+  "fields": {
+    "book": 15,
+    "publication_date": "2026-10-29T11:29:28.010Z",
+    "body": "Avis 1 sur le livre 13",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 39,
+  "fields": {
+    "book": 16,
+    "publication_date": "2026-10-29T11:29:28.400Z",
+    "body": "Avis 1 sur le livre 14",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 40,
+  "fields": {
+    "book": 16,
+    "publication_date": "2026-10-29T11:29:28.600Z",
+    "body": "Avis 2 sur le livre 14",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 41,
+  "fields": {
+    "book": 17,
+    "publication_date": "2026-10-29T11:29:28.978Z",
+    "body": "Avis 1 sur le livre 15",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 42,
+  "fields": {
+    "book": 17,
+    "publication_date": "2026-10-29T11:29:29.156Z",
+    "body": "Avis 2 sur le livre 15",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 43,
+  "fields": {
+    "book": 17,
+    "publication_date": "2026-10-29T11:29:29.367Z",
+    "body": "Avis 3 sur le livre 15",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 44,
+  "fields": {
+    "book": 19,
+    "publication_date": "2026-10-29T11:29:29.979Z",
+    "body": "Avis 1 sur le livre 17",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 45,
+  "fields": {
+    "book": 20,
+    "publication_date": "2026-10-29T11:29:30.380Z",
+    "body": "Avis 1 sur le livre 18",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 46,
+  "fields": {
+    "book": 20,
+    "publication_date": "2026-10-29T11:29:30.613Z",
+    "body": "Avis 2 sur le livre 18",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 47,
+  "fields": {
+    "book": 21,
+    "publication_date": "2026-10-29T11:29:31.027Z",
+    "body": "Avis 1 sur le livre 19",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 48,
+  "fields": {
+    "book": 21,
+    "publication_date": "2026-10-29T11:29:31.216Z",
+    "body": "Avis 2 sur le livre 19",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 49,
+  "fields": {
+    "book": 21,
+    "publication_date": "2026-10-29T11:29:31.405Z",
+    "body": "Avis 3 sur le livre 19",
+    "rating": 4,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 50,
+  "fields": {
+    "book": 23,
+    "publication_date": "2026-10-29T11:29:31.950Z",
+    "body": "Avis 1 sur le livre 21",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 51,
+  "fields": {
+    "book": 24,
+    "publication_date": "2026-10-29T11:29:32.318Z",
+    "body": "Avis 1 sur le livre 22",
+    "rating": 2,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 52,
+  "fields": {
+    "book": 24,
+    "publication_date": "2026-10-29T11:29:33.239Z",
+    "body": "Avis 2 sur le livre 22",
+    "rating": 3,
+    "user": 1
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 53,
+  "fields": {
+    "book": 25,
+    "publication_date": "2026-10-29T11:37:12.678Z",
+    "body": "Avis 1 sur le livre 23",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 54,
+  "fields": {
+    "book": 25,
+    "publication_date": "2026-10-29T11:37:12.872Z",
+    "body": "Avis 2 sur le livre 23",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 55,
+  "fields": {
+    "book": 25,
+    "publication_date": "2026-10-29T11:37:13.083Z",
+    "body": "Avis 3 sur le livre 23",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 56,
+  "fields": {
+    "book": 27,
+    "publication_date": "2026-10-29T11:37:13.650Z",
+    "body": "Avis 1 sur le livre 25",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 57,
+  "fields": {
+    "book": 28,
+    "publication_date": "2026-10-29T11:37:14.029Z",
+    "body": "Avis 1 sur le livre 26",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 58,
+  "fields": {
+    "book": 28,
+    "publication_date": "2026-10-29T11:37:14.207Z",
+    "body": "Avis 2 sur le livre 26",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 59,
+  "fields": {
+    "book": 29,
+    "publication_date": "2026-10-29T11:37:14.552Z",
+    "body": "Avis 1 sur le livre 27",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 60,
+  "fields": {
+    "book": 29,
+    "publication_date": "2026-10-29T11:37:14.741Z",
+    "body": "Avis 2 sur le livre 27",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 61,
+  "fields": {
+    "book": 29,
+    "publication_date": "2026-10-29T11:37:14.930Z",
+    "body": "Avis 3 sur le livre 27",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 62,
+  "fields": {
+    "book": 31,
+    "publication_date": "2026-10-29T11:37:15.587Z",
+    "body": "Avis 1 sur le livre 29",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 63,
+  "fields": {
+    "book": 32,
+    "publication_date": "2026-10-29T11:37:15.989Z",
+    "body": "Avis 1 sur le livre 30",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 64,
+  "fields": {
+    "book": 32,
+    "publication_date": "2026-10-29T11:37:16.178Z",
+    "body": "Avis 2 sur le livre 30",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 65,
+  "fields": {
+    "book": 33,
+    "publication_date": "2026-10-29T11:37:16.600Z",
+    "body": "Avis 1 sur le livre 31",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 66,
+  "fields": {
+    "book": 33,
+    "publication_date": "2026-10-29T11:37:16.801Z",
+    "body": "Avis 2 sur le livre 31",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 67,
+  "fields": {
+    "book": 33,
+    "publication_date": "2026-10-29T11:37:17.012Z",
+    "body": "Avis 3 sur le livre 31",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 68,
+  "fields": {
+    "book": 35,
+    "publication_date": "2026-10-29T11:37:17.591Z",
+    "body": "Avis 1 sur le livre 33",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 69,
+  "fields": {
+    "book": 36,
+    "publication_date": "2026-10-29T11:37:17.980Z",
+    "body": "Avis 1 sur le livre 34",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 70,
+  "fields": {
+    "book": 36,
+    "publication_date": "2026-10-29T11:37:18.169Z",
+    "body": "Avis 2 sur le livre 34",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 71,
+  "fields": {
+    "book": 37,
+    "publication_date": "2026-10-29T11:37:18.582Z",
+    "body": "Avis 1 sur le livre 35",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 72,
+  "fields": {
+    "book": 37,
+    "publication_date": "2026-10-29T11:37:18.770Z",
+    "body": "Avis 2 sur le livre 35",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 73,
+  "fields": {
+    "book": 37,
+    "publication_date": "2026-10-29T11:37:18.937Z",
+    "body": "Avis 3 sur le livre 35",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 74,
+  "fields": {
+    "book": 39,
+    "publication_date": "2026-10-29T11:37:19.504Z",
+    "body": "Avis 1 sur le livre 37",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 75,
+  "fields": {
+    "book": 40,
+    "publication_date": "2026-10-29T11:37:19.884Z",
+    "body": "Avis 1 sur le livre 38",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 76,
+  "fields": {
+    "book": 40,
+    "publication_date": "2026-10-29T11:37:20.073Z",
+    "body": "Avis 2 sur le livre 38",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 77,
+  "fields": {
+    "book": 41,
+    "publication_date": "2026-10-29T11:37:20.441Z",
+    "body": "Avis 1 sur le livre 39",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 78,
+  "fields": {
+    "book": 41,
+    "publication_date": "2026-10-29T11:37:20.629Z",
+    "body": "Avis 2 sur le livre 39",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 79,
+  "fields": {
+    "book": 41,
+    "publication_date": "2026-10-29T11:37:20.841Z",
+    "body": "Avis 3 sur le livre 39",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 80,
+  "fields": {
+    "book": 43,
+    "publication_date": "2026-10-29T11:37:21.408Z",
+    "body": "Avis 1 sur le livre 41",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 81,
+  "fields": {
+    "book": 44,
+    "publication_date": "2026-10-29T11:37:21.798Z",
+    "body": "Avis 1 sur le livre 42",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 82,
+  "fields": {
+    "book": 44,
+    "publication_date": "2026-10-29T11:37:21.987Z",
+    "body": "Avis 2 sur le livre 42",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 83,
+  "fields": {
+    "book": 45,
+    "publication_date": "2026-10-29T11:37:22.365Z",
+    "body": "Avis 1 sur le livre 43",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 84,
+  "fields": {
+    "book": 45,
+    "publication_date": "2026-10-29T11:37:22.554Z",
+    "body": "Avis 2 sur le livre 43",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 85,
+  "fields": {
+    "book": 45,
+    "publication_date": "2026-10-29T11:37:22.755Z",
+    "body": "Avis 3 sur le livre 43",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 86,
+  "fields": {
+    "book": 47,
+    "publication_date": "2026-10-29T11:37:23.563Z",
+    "body": "Avis 1 sur le livre 45",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 87,
+  "fields": {
+    "book": 48,
+    "publication_date": "2026-10-29T11:37:24.424Z",
+    "body": "Avis 1 sur le livre 46",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 88,
+  "fields": {
+    "book": 48,
+    "publication_date": "2026-10-29T11:37:24.613Z",
+    "body": "Avis 2 sur le livre 46",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 89,
+  "fields": {
+    "book": 49,
+    "publication_date": "2026-10-29T11:37:25.013Z",
+    "body": "Avis 1 sur le livre 47",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 90,
+  "fields": {
+    "book": 49,
+    "publication_date": "2026-10-29T11:37:25.213Z",
+    "body": "Avis 2 sur le livre 47",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 91,
+  "fields": {
+    "book": 49,
+    "publication_date": "2026-10-29T11:37:25.424Z",
+    "body": "Avis 3 sur le livre 47",
+    "rating": 4,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 93,
+  "fields": {
+    "book": 52,
+    "publication_date": "2026-10-29T11:37:26.481Z",
+    "body": "Avis 1 sur le livre 50",
+    "rating": 2,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 94,
+  "fields": {
+    "book": 52,
+    "publication_date": "2026-10-29T11:37:26.703Z",
+    "body": "Avis 2 sur le livre 50",
+    "rating": 3,
+    "user": 3
+  }
+},
+{
+  "model": "mainapp.review",
+  "pk": 95,
+  "fields": {
+    "book": 53,
+    "publication_date": "2026-10-29T11:39:28.253Z",
+    "body": "Avis 1 sur le livre 49",
+    "rating": 2,
+    "user": 3
   }
 }
 ]

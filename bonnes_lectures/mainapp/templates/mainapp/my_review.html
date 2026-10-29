@@ -1,0 +1,29 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %}Mes avis{% endblock %}
+
+{% block content %}
+  <h1>📚 Mes avis de lecture</h1>
+  <p class="text-muted">Retrouvez ici tous les avis que vous avez rédigés.</p>
+
+  <div class="list-group mt-3">
+    {% for review in reviews %}
+      <div class="list-group-item">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mb-1">
+            <a href="{% url 'book' review.book.id %}" class="text-decoration-none">{{ review.book.title }}</a>
+          </h5>
+          <span class="badge bg-warning text-dark">★ {{ review.rating }}/5</span>
+        </div>
+        <p class="mb-1">{{ review.body }}</p>
+        <small class="text-muted">Publié le {{ review.publication_date|date:"d/m/Y à H:i" }}</small>
+        <div class="mt-2">
+          <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-outline-secondary">Modifier</a>
+          <a href="{% url 'delete_review' review.id %}" class="btn btn-sm btn-outline-danger">Supprimer</a>
+        </div>
+      </div>
+    {% empty %}
+      <div class="alert alert-info">Vous n'avez pas encore rédigé d'avis.</div>
+    {% endfor %}
+  </div>
+{% endblock %}

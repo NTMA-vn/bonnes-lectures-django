@@ -4,6 +4,7 @@ from django.core.exceptions import PermissionDenied
 from django.db.models import ProtectedError
 from .forms import BookForm, ReviewForm, AuthorForm
 from .models import Book, Review, Author
+from django.core.paginator import Paginator
 def author_list(request):
     authors = Author.objects.order_by('last_name', 'first_name')
     return render(request, 'mainapp/author_list.html', {'authors': authors})
@@ -69,13 +70,23 @@ def welcome(request):
     return render(request, 'mainapp/welcome.html')
 
 def book_list(request):
-    books = Book.objects.all()
-    return render(request, 'mainapp/book_list.html', {'books': books})
+    books_all = Book.objects.order_by('id')
+    paginator = Paginator(books_all, 10) 
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'mainapp/book_list.html', {'page_obj': page_obj, 'books': page_obj})
 
 def book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
-    reviews = book.reviews.all()
-    return render(request, 'mainapp/book.html', {'book': book, 'reviews': reviews})
+    reviews_all = book.reviews.order_by('-publication_date')
+    paginator = Paginator(reviews_all, 3)
+    page_number = request.GET.get('page')
+    reviews_page = paginator.get_page(page_number)
+    return render(request, 'mainapp/book.html', {
+        'book': book,
+        'reviews': reviews_page,
+        'reviews_page': reviews_page
+    })
 
 def new_book(request):
     if not request.user.is_authenticated:
@@ -152,3 +163,10 @@ def delete_review(request, review_id):
         review.delete()
         return redirect('book', book_id=book.id)
     return render(request, 'mainapp/review_confirm_delete.html', {'review': review, 'book': book})
+
+
+def my_reviews(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    reviews = Review.objects.filter(user=request.user).order_by('-publication_date')
+    return render(request, 'mainapp/my_reviews.html', {'reviews': reviews})
