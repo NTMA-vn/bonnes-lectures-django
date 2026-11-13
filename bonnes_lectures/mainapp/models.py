@@ -15,9 +15,8 @@ class Author(models.Model):
 
 class Book(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    author = models.ForeignKey(
+    author = models.ManyToManyField(
         Author,
-        on_delete=models.PROTECT,
         related_name="books",
     )
     title = models.CharField(max_length=300)
