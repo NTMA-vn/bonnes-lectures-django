@@ -12,16 +12,17 @@ class AuthorForm(forms.ModelForm):
         help_texts = {
             "first_name": "Facultatif pour les auteurs à nom unique ou pseudonymes.",
         }
+
 class BookForm(forms.ModelForm):
-    author = forms.ModelChoiceField(
+    authors = forms.ModelMultipleChoiceField(
         queryset=Author.objects.order_by('last_name', 'first_name'),
-        label="Auteur",
-        empty_label=" Choisissez un auteur",)
+        label="Auteur(s)",
+    )
     class Meta:
         model = Book
-        fields = ["author","title","publisher","year","isbn","backCover","cover",]
+        fields = ["authors", "title", "publisher", "year", "isbn", "backCover", "cover"]
         labels = {
-            "author": "Auteur",
+            "authors": "Auteur(s)",
             "title": "Titre",
             "publisher": "Maison d'édition",
             "year": "Année",
@@ -29,7 +30,10 @@ class BookForm(forms.ModelForm):
             "backCover": "Présentation",
             "cover": "Couverture disponible",
         }
-        help_texts = {"author": "Sélectionnez l'auteur de l'ouvrage dans la liste.",}
+        help_texts = {
+            "authors": "Maintenez Ctrl (ou Cmd sur Mac) pour sélectionner plusieurs auteurs.",
+        }
+
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review

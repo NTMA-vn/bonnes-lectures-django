@@ -90,18 +90,18 @@ def book(request, book_id):
 
 def new_book(request):
     if not request.user.is_authenticated:
-            return redirect('login')
+        return redirect('login')
     if request.method == "POST":
         form = BookForm(request.POST)
         if form.is_valid():
             book = form.save(commit=False)
             book.user = request.user
             book.save()
+            form.save_m2m()  # Obligatoire pour enregistrer la relation ManyToMany après commit=False
             return redirect('book', book_id=book.id)
     else:
         form = BookForm()
     return render(request, 'mainapp/book_form.html', {'form': form})
-
 def edit_book(request, book_id):
     book = get_object_or_404(Book, pk=book_id)
     if not request.user.is_authenticated or (book.user != request.user and not request.user.is_superuser):

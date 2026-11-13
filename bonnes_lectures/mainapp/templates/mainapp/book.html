@@ -5,7 +5,14 @@
 {% block content %}
   <h1>{{ book.title }}</h1>
 
-  <p><strong>Auteur :</strong> {{ book.author }}</p>
+  <p>
+    <strong>Auteur(s) :</strong>
+    {% for author in book.authors.all %}
+      <a href="{% url 'author_detail' author.id %}">{{ author }}</a>{% if not forloop.last %}, {% endif %}
+    {% empty %}
+      Aucun auteur renseigné
+    {% endfor %}
+  </p>
   <p><strong>Maison d'édition :</strong> {{ book.publisher }}</p>
   <p><strong>Année :</strong> {{ book.year }}</p>
   <p><strong>ISBN :</strong> {{ book.isbn }}</p>
